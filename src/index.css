@@ -1,0 +1,15 @@
+@keyframes floatAura {
+
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0px);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(20px);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
