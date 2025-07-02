@@ -127,18 +127,20 @@ export default function AddSong() {
                             placeholder="Select mood"
                             value={mood}
                             onChange={(e) => setMood(e.target.value)}
-                            bg="whiteAlpha.100"
+                            bg="blackAlpha.100"
                             color="white"
-                            _placeholder={{ color: 'gray.300' }}
+                            _placeholder={{ color: 'gray.400' }}
+                            _hover={{ bg: 'blackAlpha.600' }}
+                            _focus={{ bg: 'blackAlpha.600' }}
                         >
-                            <option value="Happy">Happy</option>
-                            <option value="Sad">Sad</option>
-                            <option value="Angry">Angry</option>
-                            <option value="Calm">Calm</option>
-                            <option value="Disgust">Disgust</option>
-                            <option value="Fear">Fear</option>
-                            <option value="Surprise">Surprise</option>
-                            <option value="Neutral">Neutral</option>
+                            <option style={{ backgroundColor: '#1A202C', color: 'white' }} value="Happy">Happy</option>
+                            <option style={{ backgroundColor: '#1A202C', color: 'white' }} value="Sad">Sad</option>
+                            <option style={{ backgroundColor: '#1A202C', color: 'white' }} value="Angry">Angry</option>
+                            <option style={{ backgroundColor: '#1A202C', color: 'white' }} value="Calm">Calm</option>
+                            <option style={{ backgroundColor: '#1A202C', color: 'white' }} value="Disgust">Disgust</option>
+                            <option style={{ backgroundColor: '#1A202C', color: 'white' }} value="Fear">Fear</option>
+                            <option style={{ backgroundColor: '#1A202C', color: 'white' }} value="Surprise">Surprise</option>
+                            <option style={{ backgroundColor: '#1A202C', color: 'white' }} value="Neutral">Neutral</option>
                         </Select>
                     </FormControl>
 
