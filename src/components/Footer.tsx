@@ -86,7 +86,7 @@ export default function Footer() {
 
                     <IconButton
                         as="a"
-                        href="https://instagram.com/hritikagore11" // ← Replace with your real Insta
+                        href="https://instagram.com/ratherbehritika.com" // ← Replace with your real Insta
                         aria-label="Instagram"
                         icon={<FaInstagram />}
                         target="_blank"

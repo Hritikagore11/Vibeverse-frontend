@@ -24,7 +24,7 @@ export default function SelectMode() {
         <Box
             minH="100vh"
             bg="radial-gradient(circle at center, #3a2936 0%, #2a1c28 40%, #1b1b1f 100%)"
-            pt={{ base: '150px', md: '100px' }} // navbar safe space
+            pt={{ base: '150px', md: '100px' }} 
             pb={16}
             px={{ base: 4, md: 8, lg: 12 }}
             fontFamily="'Poppins', sans-serif"

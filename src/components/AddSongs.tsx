@@ -41,7 +41,7 @@ export default function AddSong() {
         formData.append('file', file);
 
         try {
-            await axios.post('http://localhost:5000/add-song', formData, {
+            await axios.post(`${import.meta.env.VITE_API_URL}/add-song`, formData, {
                 headers: { 'Content-Type': 'multipart/form-data' },
             });
 

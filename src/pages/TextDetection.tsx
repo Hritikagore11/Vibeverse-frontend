@@ -1,4 +1,3 @@
-// src/pages/TextDetection.tsx
 import {
     Box,
     Button as ChakraButton,
@@ -44,7 +43,7 @@ export default function TextDetection() {
         setIsDetecting(true);
 
         try {
-            const res = await fetch("http://127.0.0.1:5000/detect-text", {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/detect-text`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ text: finalText }),

@@ -58,7 +58,7 @@ export default function ImageDetection() {
             const formData = new FormData();
             formData.append("image", blob, "image.jpg");
 
-            const response = await fetch("http://127.0.0.1:5000/detect-image", {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/detect-image`, {
                 method: "POST",
                 body: formData,
             });
