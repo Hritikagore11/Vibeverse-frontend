@@ -282,7 +282,7 @@ export default function ResultPage() {
                     <Box mt={4}>
                         <audio
                             ref={audioRef}
-                            src={`${import.meta.env.VITE_API_URL}${currentSong.filePath}`}
+                            src={`${import.meta.env.VITE_API_URL}/${currentSong.filePath}`}
                             onEnded={playNext}
                             autoPlay
                             onTimeUpdate={() => {
