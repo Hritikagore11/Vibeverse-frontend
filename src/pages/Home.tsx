@@ -17,6 +17,7 @@ import HowItWorks from '../components/HowItWorks';
 import { motion } from 'framer-motion';
 
 const MotionBox = motion(Box);
+
 export default function Home() {
     const [darker, setDarker] = useState(false);
 
@@ -24,7 +25,8 @@ export default function Home() {
         <MotionBox
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: 'easeInOut' }}>
+            transition={{ duration: 0.6, ease: 'easeInOut' }}
+        >
             <Box
                 position="relative"
                 bg="white"
@@ -40,11 +42,11 @@ export default function Home() {
                     width={{ base: '180vw', md: '150vw' }}
                     height={{ base: '180vw', md: '150vw' }}
                     bg={`radial-gradient(
-          circle,
-          ${darker ? 'rgba(255,165,100,0.35)' : 'rgba(255,203,112,0.4)'} 0%,
-          ${darker ? 'rgba(255,128,170,0.3)' : 'rgba(255,144,188,0.3)'} 40%,
-          rgba(255,255,255,0.95) 80%
-        )`}
+                        circle,
+                        ${darker ? 'rgba(255,165,100,0.35)' : 'rgba(255,203,112,0.4)'} 0%,
+                        ${darker ? 'rgba(255,128,170,0.3)' : 'rgba(255,144,188,0.3)'} 40%,
+                        rgba(255,255,255,0.95) 80%
+                    )`}
                     filter="blur(120px)"
                     borderRadius="full"
                     zIndex={0}
@@ -68,10 +70,26 @@ export default function Home() {
                         </Heading>
                         <SimpleGrid columns={[1, 2, 4]} spacing={8} maxW="7xl" mx="auto">
                             {[
-                                { icon: FaHeart, title: "Dual Mood Detection", text: "Upload a photo or type how you feel – we support both!" },
-                                { icon: FaBrain, title: "AI-Powered Accuracy", text: "Uses DeepFace and Transformers to understand emotions better." },
-                                { icon: FaMusic, title: "Smart Recommendations", text: "Get perfectly matched songs based on your detected mood." },
-                                { icon: FaPalette, title: "Beautiful UI", text: "Mood-reactive design with smooth gradients and animations." },
+                                {
+                                    icon: FaHeart,
+                                    title: "Dual Mood Detection",
+                                    text: "Upload a photo or type how you feel – we support both!",
+                                },
+                                {
+                                    icon: FaBrain,
+                                    title: "AI-Powered Accuracy",
+                                    text: "Uses DeepFace and Transformers to understand emotions better.",
+                                },
+                                {
+                                    icon: FaMusic,
+                                    title: "Smart Recommendations",
+                                    text: "Get perfectly matched songs based on your detected mood.",
+                                },
+                                {
+                                    icon: FaPalette,
+                                    title: "Beautiful UI",
+                                    text: "Mood-reactive design with smooth gradients and animations.",
+                                },
                             ].map(({ icon, title, text }, idx) => (
                                 <Box
                                     key={idx}
@@ -103,7 +121,7 @@ export default function Home() {
                             Frequently Asked Questions
                         </Heading>
                         <Box maxW="4xl" mx="auto">
-                            <Accordion allowToggle>
+                            <Accordion allowToggle border="none">
                                 {[
                                     {
                                         q: "How accurate is mood detection?",
@@ -118,14 +136,19 @@ export default function Home() {
                                         a: "Yes! Use the 'Add Song' feature to upload songs with mood labels for personalization.",
                                     },
                                 ].map(({ q, a }, i) => (
-                                    <AccordionItem key={i}>
-                                        <AccordionButton _expanded={{ bg: 'pink.400', color: 'white' }}>
+                                    <AccordionItem key={i} border="none">
+                                        <AccordionButton
+                                            _expanded={{ bg: 'pink.400', color: 'white' }}
+                                            border="none"
+                                            px={4}
+                                            py={3}
+                                        >
                                             <Box flex="1" textAlign="left" fontWeight="medium" color="white">
                                                 {q}
                                             </Box>
                                             <AccordionIcon />
                                         </AccordionButton>
-                                        <AccordionPanel pb={4} color="gray.100">
+                                        <AccordionPanel pb={4} color="gray.100" border="none">
                                             {a}
                                         </AccordionPanel>
                                     </AccordionItem>
