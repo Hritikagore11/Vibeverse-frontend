@@ -13,7 +13,7 @@ export default function FloatingBackButton() {
     return (
         <Button
             position="absolute"
-            top="85px"  // adjust based on your Navbar height
+            top={{ base: '90px', md: '100px' }}  // Responsive offset from top
             left="28px"
             zIndex="90"
             size="sm"
@@ -23,7 +23,10 @@ export default function FloatingBackButton() {
             shadow="md"
             fontWeight="medium"
             leftIcon={<Icon as={ArrowBackIcon} />}
-            _hover={{ bgGradient: 'linear(to-r, pink.500, pink.700)', transform: 'scale(1.05)' }}
+            _hover={{
+                bgGradient: 'linear(to-r, pink.500, pink.700)',
+                transform: 'scale(1.05)',
+            }}
             onClick={() => navigate(-1)}
         >
             Back

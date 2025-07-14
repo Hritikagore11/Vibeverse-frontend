@@ -1,4 +1,4 @@
-import { Box, Heading, Text, VStack } from '@chakra-ui/react';
+import { Box, Heading, Text, VStack, Image } from '@chakra-ui/react';
 
 export default function About() {
     return (
@@ -19,7 +19,19 @@ export default function About() {
                 backdropFilter="blur(10px)"
                 boxShadow="0 8px 24px rgba(0, 0, 0, 0.4)"
             >
-                <VStack spacing={4} color="white">
+                <VStack spacing={6} color="white">
+                    {/* 📷 Image Section */}
+                    <Image
+                        src="/public/about.png"
+                        alt="About Banner"
+                        borderRadius="xl"
+                        objectFit="cover"
+                        width="100%"
+                        maxH="300px"
+                        fallbackSrc="https://via.placeholder.com/600x300?text=VibeVerse"
+                    />
+
+                    {/* 📘 Text Section */}
                     <Heading
                         size="xl"
                         bgGradient="linear(to-r, pink.400, purple.400)"
